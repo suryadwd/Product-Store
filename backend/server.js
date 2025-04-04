@@ -11,6 +11,11 @@ const __dirname = path.resolve()
 app.use(express.json())
 app.use("/api/products",productRoutes)
 
+app.use(cors({
+    origin: "*",  
+  }));
+  
+
 const PORT = process.env.PORT 
 
 if(process.env.NODE_ENV === "production"){
